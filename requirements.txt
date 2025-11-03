@@ -1,0 +1,11 @@
+tensorflow==2.16.1
+keras==3.2.1
+scikit-learn==1.5.2
+opencv-python
+numpy
+pandas
+matplotlib
+tabulate
+seaborn
+tqdm
+joblib
