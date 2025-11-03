@@ -1,141 +1,66 @@
-Aerial Image Classification using Deep Learning and Machine Learning
+# Aerial Image Classification
 
-This project classifies aerial (satellite) images into multiple land-use and land-cover categories using both Deep Learning (DL) and Machine Learning (ML) techniques. It demonstrates a comparative approach between computational efficiency and model accuracy through CNNs, Transfer Learning, Random Forest, and SVM models.
+This project focuses on classifying aerial images using both Machine Learning (ML) and Deep Learning (DL) models. It demonstrates a complete end-to-end pipeline — from data preparation and feature extraction to model training, evaluation, and comparison.
 
-Overview
+---
 
-The dataset consists of labeled aerial images across 21 classes such as agricultural, airplane, baseballdiamond, beach, buildings, chaparral, denseresidential, forest, freeway, golfcourse, harbor, intersection, mediumresidential, mobilehomepark, overpass, parkinglot, river, runway, sparseresidential, storagetanks, and tenniscourt.
+## Models Implemented
 
-The project includes:
+### Machine Learning
+- Random Forest Classifier  
+- Support Vector Machine (SVM)
 
-Data preprocessing and feature extraction
+### Deep Learning
+- Custom CNN Model  
+- Fine-Tuned CNN (Transfer Learning using pre-trained architectures)
 
-Multiple model implementations (CNNs, Transfer Learning, Random Forest, SVM)
+---
 
-Automated model comparison with accuracy reports and visualizations
+## Dataset Information
 
-Project Structure
-Aerial Image Classification/
-│
-├── Dataset/
-│   ├── features/
-│   ├── processed/
-│   └── raw/
-│
-├── models/
-│   ├── *.keras / *.h5   # Deep learning models
-│   └── *.pkl            # Machine learning models
-│
-├── notebooks/
-│   ├── model_comparison.ipynb
-│   └── reports/
-│       ├── model_accuracy_comparison.png
-│       ├── model_comparison_results.csv
-│       └── model_comparison_summary.md
-│
-├── results/
-│   ├── cnn_predictions.npy
-│   └── custom_cnn_model.h5
-│
-├── src/
-│   ├── data_preparation.py
-│   ├── feature_extraction.py
-│   ├── model_dl_customfit.py
-│   ├── model_dl_finetune.py
-│   ├── model_ml_rf.py
-│   └── model_ml_svm.py
-│
-├── requirements.txt
-└── README.md
+The dataset used in this project is derived from the **UC Merced Land Use Dataset**, a publicly available aerial image dataset containing 21 land-use classes such as agricultural, beach, forest, runway, and more.  
+All images are of size **256×256 pixels** with balanced class distribution.  
 
-Models Implemented
-Type	Model	Description
-Deep Learning	Custom CNN	Lightweight convolutional model trained from scratch on aerial data
-Deep Learning	MobileNetV2 / VGG16 (Fine-Tuned)	Transfer learning with optimized layers for aerial scenes
-Machine Learning	Random Forest	Ensemble classifier trained on extracted image features
-Machine Learning	SVM (Lightweight)	Optimized Support Vector Machine with feature scaling
-Results Summary
+Dataset source: [UC Merced Land Use Dataset](http://weegee.vision.ucmerced.edu/datasets/landuse.html)
 
-All final comparison metrics are automatically generated in
-notebooks/reports/model_comparison_summary.md
+---
 
-Example performance snapshot:
+## Workflow Overview
 
-Model	Accuracy	Type
-Custom CNN	0.85	Deep Learning
-MobileNetV2 Fine-Tuned	0.88	Deep Learning
-Random Forest	0.72	Machine Learning
-SVM (Lightweight)	0.34	Machine Learning
+1. **Data Preparation**  
+   - Load and preprocess aerial image dataset  
+   - Resize, normalize, and split into training and testing sets  
+   - Extract structured features for ML & DL pipelines  
 
-Accuracy plot:
-notebooks/reports/model_accuracy_comparison.png
+2. **Model Training**  
+   - Train ML models (Random Forest, SVM) on extracted features  
+   - Train DL models (Custom CNN and Fine-Tuned CNN) on raw image data  
 
-Usage Guide
-1. Install dependencies
+3. **Evaluation**  
+   - Compute metrics including accuracy, precision, recall, and F1-score  
+   - Visualize performance comparisons across models  
+
+4. **Reporting**  
+   - Results are saved in the `reports/` directory as `.csv`, `.png`, and `.md` summaries  
+
+---
+
+## Results Summary
+
+| Model | Type | Accuracy |
+|--------|------|----------|
+| Random Forest | ML | — |
+| SVM | ML | — |
+| Custom CNN | DL | — |
+| Fine-Tuned CNN | DL | — |
+
+(Detailed metrics are available in `reports/model_comparison_summary.md`)
+
+---
+
+## Requirements
+
+Install all required dependencies using:
+
+```bash
 pip install -r requirements.txt
-
-2. Prepare and process dataset
-
-Ensure the dataset is available under:
-
-Dataset/processed/aerial_data.npz
-
-3. Train or load models
-
-Run any model script from the src/ folder, for example:
-
-python src/model_dl_customfit.py
-python src/model_ml_rf.py
-
-4. Compare models
-
-Open the notebook:
-
-notebooks/model_comparison.ipynb
-
-
-Run all cells to generate accuracy reports and summaries.
-
-Outputs
-
-Model Comparison Report: notebooks/reports/model_comparison_summary.md
-
-Accuracy Plot: notebooks/reports/model_accuracy_comparison.png
-
-Predictions (DL): results/cnn_predictions.npy
-
-Trained Models: stored in models/
-
-Technologies Used
-
-Python 3.12
-
-TensorFlow / Keras
-
-Scikit-learn
-
-OpenCV
-
-NumPy / Pandas / Matplotlib
-
-Seaborn / Tabulate
-
-License
-
-MIT License © 2025 Duke
-
-Author
-
-Duke
-Aspiring Computer Science Engineer | UAV and AI Enthusiast
-Focused on building intelligent systems that bridge aerial imaging and machine learning.
-
-Highlights
-
-Covers both ML and DL approaches
-
-Real-world dataset with 21 aerial categories
-
-Modular and reproducible code
-
-Suitable for research presentation or portfolio use
