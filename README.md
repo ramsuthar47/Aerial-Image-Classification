@@ -1,6 +1,6 @@
 # Aerial Image Classification
 
-This project focuses on classifying aerial images using both Machine Learning (ML) and Deep Learning (DL) models. It demonstrates a complete end-to-end pipeline — from data preparation and feature extraction to model training, evaluation, and comparison.
+This project focuses on classifying aerial images using both Machine Learning (ML) and Deep Learning (DL) models. It demonstrates a complete end-to-end pipeline from data preparation and feature extraction to model training, evaluation, and comparison.
 
 ---
 
