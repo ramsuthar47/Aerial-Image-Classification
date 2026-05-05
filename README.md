@@ -12,7 +12,7 @@ This project focuses on classifying aerial images using both Machine Learning (M
 
 ### Deep Learning
 - Custom CNN Model  
-- Fine-Tuned CNN (Transfer Learning using pre-trained architectures)
+- VGG16 Fine-tuned
 
 ---
 
