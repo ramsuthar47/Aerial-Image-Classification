@@ -49,10 +49,10 @@ Dataset source: [UC Merced Land Use Dataset](http://weegee.vision.ucmerced.edu/d
 
 | Model | Type | Accuracy |
 |--------|------|----------|
-| Random Forest | ML | — |
-| SVM | ML | — |
-| Custom CNN | DL | — |
-| Fine-Tuned CNN | DL | — |
+| Random Forest | ML | 42.6% |
+| SVM | ML | 85.4% |
+| Custom CNN | DL | 87.5% |
+| Fine-Tuned CNN | DL | 91.2% |
 
 (Detailed metrics are available in `reports/model_comparison_summary.md`)
 
